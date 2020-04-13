@@ -1,0 +1,12 @@
+/home/pi/sma_datalogger/yasdi/projects/generic-cmake/CMakeFiles/install.dir
+/home/pi/sma_datalogger/yasdi/projects/generic-cmake/CMakeFiles/edit_cache.dir
+/home/pi/sma_datalogger/yasdi/projects/generic-cmake/CMakeFiles/yasdimaster.dir
+/home/pi/sma_datalogger/yasdi/projects/generic-cmake/CMakeFiles/install/strip.dir
+/home/pi/sma_datalogger/yasdi/projects/generic-cmake/CMakeFiles/yasdishell.dir
+/home/pi/sma_datalogger/yasdi/projects/generic-cmake/CMakeFiles/list_install_components.dir
+/home/pi/sma_datalogger/yasdi/projects/generic-cmake/CMakeFiles/yasdi.dir
+/home/pi/sma_datalogger/yasdi/projects/generic-cmake/CMakeFiles/rebuild_cache.dir
+/home/pi/sma_datalogger/yasdi/projects/generic-cmake/CMakeFiles/yasdi_drv_ip.dir
+/home/pi/sma_datalogger/yasdi/projects/generic-cmake/CMakeFiles/yasdi_drv_serial.dir
+/home/pi/sma_datalogger/yasdi/projects/generic-cmake/CMakeFiles/install/local.dir
+/home/pi/sma_datalogger/yasdi/projects/generic-cmake/CMakeFiles/test.dir

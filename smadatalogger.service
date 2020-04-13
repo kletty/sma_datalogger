@@ -1,0 +1,12 @@
+[Unit]
+Description=SMA datalogger service
+After=multi-user.target
+
+[Service]
+Type=idle
+User= pi
+ExecStart=/home/pi/sma_datalogger/start_logger.sh
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

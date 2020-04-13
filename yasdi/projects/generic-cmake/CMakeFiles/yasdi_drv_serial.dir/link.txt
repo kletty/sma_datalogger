@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC  -Wall -fmessage-length=0   -shared -Wl,-soname,libyasdi_drv_serial.so.1 -o libyasdi_drv_serial.so.1.8.1 CMakeFiles/yasdi_drv_serial.dir/home/pi/sma_datalogger/yasdi/driver/serial_posix.o  -L/home/pi/sma_datalogger/yasdi/projects/generic-cmake -Wl,-rpath,/home/pi/sma_datalogger/yasdi/projects/generic-cmake: libyasdi.so.1.8.1 -ldl -lpthread 

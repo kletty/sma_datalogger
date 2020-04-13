@@ -1,0 +1,1 @@
+/usr/bin/cc  -Wall -fmessage-length=0   -rdynamic CMakeFiles/yasdishell.dir/home/pi/sma_datalogger/yasdi/shell/CommonShellUIMain.o  -o yasdishell  -L/home/pi/sma_datalogger/yasdi/projects/generic-cmake -Wl,-rpath,/home/pi/sma_datalogger/yasdi/projects/generic-cmake: libyasdimaster.so.1.8.1 libyasdi.so.1.8.1 -ldl -lpthread 

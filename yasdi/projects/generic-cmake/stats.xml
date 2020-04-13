@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml-stylesheet type="text/xsl" href="YasdiStatistics.xsl" ?>
+<!DOCTYPE statistics SYSTEM "YasdiStatistics.dtd">
+<statistics>
+   <statistic name="PacketsWrite" value="0" unit="Packets" />
+   <statistic name="PacketsRead" value="0" unit="Packets" />
+   <statistic name="UsedMemory" value="0" unit="Bytes" />
+   <statistic name="UnusedBufferFrags" value="0" unit="Count" />
+</statistics>

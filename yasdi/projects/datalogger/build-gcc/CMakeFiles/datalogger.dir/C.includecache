@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../../../include/compiler.h
+
+../../../libs/libyasdimaster.h
+compiler.h
+../../../libs/compiler.h
+smadef.h
+../../../libs/smadef.h
+
+../../../smalib/smadef.h
+
+/home/pi/sma_datalogger/yasdi/projects/datalogger/datalogger.c
+libyasdimaster.h
+/home/pi/sma_datalogger/yasdi/projects/datalogger/libyasdimaster.h
+stdio.h
+-
+stdlib.h
+-
+time.h
+-
+sys/time.h
+-
+unistd.h
+-
+string.h
+-
+sys/stat.h
+-
+dirent.h
+-
+sys/types.h
+-
+dirent.h
+-
+

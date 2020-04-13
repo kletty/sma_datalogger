@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC  -Wall -fmessage-length=0   -shared -Wl,-soname,libyasdi_drv_ip.so.1 -o libyasdi_drv_ip.so.1.8.1 CMakeFiles/yasdi_drv_ip.dir/home/pi/sma_datalogger/yasdi/driver/ip_generic.o  -L/home/pi/sma_datalogger/yasdi/projects/generic-cmake -Wl,-rpath,/home/pi/sma_datalogger/yasdi/projects/generic-cmake: libyasdi.so.1.8.1 -ldl -lpthread 

@@ -1,0 +1,1 @@
+/usr/bin/cc  -Wall -fmessage-length=0   -rdynamic CMakeFiles/datalogger.dir/datalogger.o  -o datalogger  -L/home/pi/sma_datalogger/yasdi/projects/datalogger/build-gcc -Wl,-rpath,/home/pi/sma_datalogger/yasdi/projects/datalogger/build-gcc: libyasdimaster.so.1.8.1 libyasdi.so.1.8.1 -ldl -lpthread 

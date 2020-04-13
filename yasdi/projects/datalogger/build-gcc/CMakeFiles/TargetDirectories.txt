@@ -1,0 +1,12 @@
+/home/pi/sma_datalogger/yasdi/projects/datalogger/build-gcc/CMakeFiles/install.dir
+/home/pi/sma_datalogger/yasdi/projects/datalogger/build-gcc/CMakeFiles/edit_cache.dir
+/home/pi/sma_datalogger/yasdi/projects/datalogger/build-gcc/CMakeFiles/yasdimaster.dir
+/home/pi/sma_datalogger/yasdi/projects/datalogger/build-gcc/CMakeFiles/list_install_components.dir
+/home/pi/sma_datalogger/yasdi/projects/datalogger/build-gcc/CMakeFiles/yasdi.dir
+/home/pi/sma_datalogger/yasdi/projects/datalogger/build-gcc/CMakeFiles/install/strip.dir
+/home/pi/sma_datalogger/yasdi/projects/datalogger/build-gcc/CMakeFiles/datalogger.dir
+/home/pi/sma_datalogger/yasdi/projects/datalogger/build-gcc/CMakeFiles/rebuild_cache.dir
+/home/pi/sma_datalogger/yasdi/projects/datalogger/build-gcc/CMakeFiles/yasdi_drv_ip.dir
+/home/pi/sma_datalogger/yasdi/projects/datalogger/build-gcc/CMakeFiles/yasdi_drv_serial.dir
+/home/pi/sma_datalogger/yasdi/projects/datalogger/build-gcc/CMakeFiles/install/local.dir
+/home/pi/sma_datalogger/yasdi/projects/datalogger/build-gcc/CMakeFiles/test.dir

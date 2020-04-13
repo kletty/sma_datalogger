@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="shortcut icon" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/favicon.png" sizes="96x96">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  
+  <title>Photovoltaikanlage</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 550px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+        
+    /* On small screens, set height to 'auto' for the grid */
+    @media screen and (max-width: 767px) {
+      .row.content {height: auto;} 
+    }
+  </style>
+  
+</head>
+<body onload="onStart()"> 
+
+<nav class="navbar navbar-inverse visible-xs">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Anlage</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Aktuelle Daten</a></li>
+        <li><a href="day.html">Tagesansicht</a></li>
+        <li><a href="#">Monatsübersicht</a></li>
+        <li><a href="#">Jahresvergleich</a></li>
+        <li><a href="#">Logbuch</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-2 sidenav hidden-xs">
+      <h2>Anlage</h2>
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="index.html">Aktuelle Daten</a></li>
+        <li><a href="day.html">Tagesansicht</a></li>
+        <li><a href="#section3">Monatsübersicht</a></li>
+        <li><a href="#section4">Jahresvergleich</a></li>
+        <li><a href="#section5">Logbuch</a></li>
+      </ul><br>
+    </div>
+    <br>
+    
+    <div class="col-sm-9">
+      <div class="row" >
+        <div class="col-sm-12">
+          <div class="well" id="chart_div">
+            <h2>Aktuelle Leistungen</h2>
+            <p id="Timestamp">Timestamp</p>
+            <h3 id="value1">Wechselrichter 1</h3>
+            <div class="progress">
+              <div class="progress-bar progress-bar-success" role="progressbar" id="progress1" style="width:0%; background-color: #440154">
+                
+              </div>
+            </div>
+            <h3 id="value2">Wechselrichter 2</h3>
+            <div class="progress">
+              <div class="progress-bar progress-bar-success" role="progressbar" id="progress2" style="width:0%; background-color: #31688e">
+                
+              </div>
+            </div>
+            <h3 id="value3">Wechselrichter 3</h3>
+            <div class="progress">
+              <div class="progress-bar progress-bar-success" role="progressbar" id="progress3" style="width:0%; background-color: #35b779; color:black">
+                
+              </div>
+            </div>
+            <h3 id="value4">Wechselrichter 4</h3>
+            <div class="progress">
+              <div class="progress-bar progress-bar-success" role="progressbar" id="progress4" style="width:0%; background-color: #fde725; color:black">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="well" >
+            <h2>Ertragskurve heute</h2>
+            <img src="Graphs/loading.gif" class="mx-auto d-block" style="max-width:100%; max-height:700px" id="graph">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  <script>
+
+    function onStart()
+    {
+      loadGraphOfDate(new Date());
+      update();
+    }
+
+    function loadGraphOfDate() 
+    {
+      var fileName = "Graphs/" + arguments[0].getFullYear()+(("0"+(arguments[0].getMonth()+1)).slice(-2)) + (("0"+arguments[0].getDate()).slice(-2))+".png";
+      document.getElementById("graph").src = fileName;
+    }
+    
+    function successFunction(data) {
+      var dataColums = data.split('\t');
+      document.getElementById("Timestamp").innerHTML = dataColums[0];
+      document.getElementById("value1").innerHTML = "Wechselrichter 1: " + dataColums[1] + 'W';
+      document.getElementById("progress1").innerHTML = dataColums[2] + '%';
+      document.getElementById("progress1").style.width = dataColums[2] + '%';
+      
+      document.getElementById("value2").innerHTML = "Wechselrichter 2: " + dataColums[3] + 'W';
+      document.getElementById("progress2").innerHTML = dataColums[4] + '%';
+      document.getElementById("progress2").style.width = dataColums[4] + '%';
+      
+      document.getElementById("value3").innerHTML = "Wechselrichter 3: " + dataColums[5] + 'W';
+      document.getElementById("progress3").innerHTML = dataColums[6] + '%';
+      document.getElementById("progress3").style.width = dataColums[6] + '%';
+      
+      document.getElementById("value4").innerHTML = "Wechselrichter 4: " + dataColums[7] + 'W';
+      document.getElementById("progress4").innerHTML = dataColums[8] + '%';
+      document.getElementById("progress4").style.width = dataColums[8] + '%';
+    }
+    
+    function update() {
+       $.ajax({
+        url: 'curentValues.csv',
+        dataType: 'text',
+      }).done(successFunction);
+    }
+    var interval = setInterval(update, 10000);
+    
+  </script>
+  
+</body>
+</html>
